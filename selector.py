@@ -258,6 +258,50 @@ def module_level_tests(path):
     return s
 
 
+
+def class_reader_tests(f, analysis):
+    """Add observed readers when class-level structure changes."""
+    if not analysis["skel"]:
+        return set()
+
+    path = f["path"]
+    old = old_src(path)
+    if old is None:
+        return set()
+
+    new_lines = apply_hunks(old.split("\n"), f["hunks"])
+    if new_lines is None:
+        return set()
+
+    old_touch, new_touch = touched(f["hunks"])
+    module = path[:-3].replace("/", ".")
+    dependencies = M.get("class_readers", {})
+    indices = set()
+
+    for source, changed_lines in (
+        (old, old_touch),
+        ("\n".join(new_lines), new_touch),
+    ):
+        if not changed_lines:
+            continue
+
+        tree = ast.parse(source)
+
+        for node in ast.walk(tree):
+            if not isinstance(node, ast.ClassDef):
+                continue
+
+            if any(
+                node.lineno <= line <= node.end_lineno
+                for line in changed_lines
+            ):
+                key = f"{module}:{node.name}"
+                indices.update(dependencies.get(key, ()))
+
+    return nums(indices)
+
+
+
 def func_tests(per, stmts, start, end, old_touch):
     lines = [l for l in old_touch if start <= l <= end]
     ix = set()
@@ -295,6 +339,7 @@ def sel_sqlglot(f):
     out = set()
     if r["skel"]:
         out |= module_level_tests(path)
+        out |= class_reader_tests(f, r)
     per = M["line"].get(path, {})
     for key in r["changed"]:
         _, start, end = r["sem"]["funcs"][key]
