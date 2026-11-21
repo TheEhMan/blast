@@ -193,6 +193,8 @@ def init():
     for t in T:
         BYFILE.setdefault(t["file"], set()).add(t["number"])
     VN = [NUM.get(i) for i in M["vocab"]]
+    global TINY
+    TINY = nums(M.get("tiny", ()))
 
 
 def nums(ixs):
@@ -408,6 +410,9 @@ def select(text):
             print(f"fallback ALL for {p}: {e!r}", file=sys.stderr)
             s = set(ALL)
         chosen |= s
+    if chosen:
+        chosen |= TINY
+    
     return chosen
 
 
