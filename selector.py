@@ -410,11 +410,9 @@ def select(text):
             print(f"fallback ALL for {p}: {e!r}", file=sys.stderr)
             s = set(ALL)
         chosen |= s
-    # end of select(), replacing the existing tail
-    if not chosen:
-        chosen = set(ALL)
-    else:
+    if chosen:
         chosen |= TINY
+    
     return chosen
 
 
