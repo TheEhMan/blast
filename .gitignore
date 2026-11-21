@@ -1,3 +1,13 @@
+# Local reports and generated build outputs
 output.jsonl
+coverage-pilot.json
 map.pkl
 map.pkl.bak
+*.pyc
+__pycache__/
+.pytest_cache/
+.coverage*
+.venv/
+venv/
+build/
+dist/
