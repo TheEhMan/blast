@@ -22,7 +22,7 @@ from pathlib import Path
 sys.setrecursionlimit(20000)
 
 DATA = Path(os.environ.get("BLAST_DATA", "/data"))
-MAP = Path(os.environ.get("BLAST_MAP", "/opt/map.pkl"))
+MAP = Path(os.environ.get("BLAST_MAP", "/opt/map.pkl.z"))
 
 # ---- tuning knobs (change one at a time, re-run `make sample`) ----------------
 LINE_LEVEL = True         # look up the changed statement; else union over the whole function
@@ -183,8 +183,8 @@ def apply_hunks(old_lines, hunks):
 # ============================ runtime helpers ====================================
 def init():
     global M, T, NUM, SEC, VN, ALL, BYFILE
-    with open(MAP, "rb") as fh:
-        M = pickle.load(fh)
+    raw = MAP.read_bytes()
+    M = pickle.loads(zlib.decompress(raw) if MAP.suffix == ".z" else raw)
     T = json.loads((DATA / "tests.json").read_text())["tests"]
     NUM = {t["id"]: t["number"] for t in T}
     SEC = {t["number"]: t["seconds"] for t in T}
