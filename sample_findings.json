@@ -1,0 +1,558 @@
+{
+  "purpose": "OFFLINE ANALYSIS ONLY. Do not copy sample-label-derived data into the submission.",
+  "test_count": 1620,
+  "commit_count": 30,
+  "breaking_commits": 18,
+  "nonbreaking_commits": 12,
+  "sample_zero_miss_cost_lower_bound_seconds": 94.351,
+  "sample_failing_only_feasible_cost_seconds": 94.351,
+  "sample_zero_miss_minimum_proved_exact": true,
+  "file_costs": [
+    {
+      "file": "tests/test_executor.py",
+      "tests": 60,
+      "test_seconds": 31.565,
+      "lpt_cost_seconds": 25.454,
+      "lower_bound_seconds": 25.454
+    },
+    {
+      "file": "tests/test_parser.py",
+      "tests": 81,
+      "test_seconds": 29.143,
+      "lpt_cost_seconds": 31.143,
+      "lower_bound_seconds": 31.143
+    },
+    {
+      "file": "tests/test_optimizer.py",
+      "tests": 167,
+      "test_seconds": 19.818,
+      "lpt_cost_seconds": 12.606,
+      "lower_bound_seconds": 12.606
+    },
+    {
+      "file": "tests/test_generator.py",
+      "tests": 10,
+      "test_seconds": 6.752,
+      "lpt_cost_seconds": 8.752,
+      "lower_bound_seconds": 8.752
+    },
+    {
+      "file": "tests/dialects/test_dialect.py",
+      "tests": 113,
+      "test_seconds": 1.816,
+      "lpt_cost_seconds": 3.816,
+      "lower_bound_seconds": 3.816
+    },
+    {
+      "file": "tests/test_serde.py",
+      "tests": 5,
+      "test_seconds": 1.394,
+      "lpt_cost_seconds": 3.394,
+      "lower_bound_seconds": 3.394
+    },
+    {
+      "file": "tests/dialects/test_snowflake.py",
+      "tests": 116,
+      "test_seconds": 1.387,
+      "lpt_cost_seconds": 3.387,
+      "lower_bound_seconds": 3.387
+    },
+    {
+      "file": "tests/test_schema.py",
+      "tests": 17,
+      "test_seconds": 1.324,
+      "lpt_cost_seconds": 3.324,
+      "lower_bound_seconds": 3.324
+    },
+    {
+      "file": "tests/dialects/test_bigquery.py",
+      "tests": 72,
+      "test_seconds": 0.94,
+      "lpt_cost_seconds": 2.94,
+      "lower_bound_seconds": 2.94
+    },
+    {
+      "file": "tests/test_expressions.py",
+      "tests": 79,
+      "test_seconds": 0.905,
+      "lpt_cost_seconds": 2.905,
+      "lower_bound_seconds": 2.905
+    },
+    {
+      "file": "tests/dialects/test_duckdb.py",
+      "tests": 73,
+      "test_seconds": 0.708,
+      "lpt_cost_seconds": 2.708,
+      "lower_bound_seconds": 2.708
+    },
+    {
+      "file": "tests/dialects/test_tsql.py",
+      "tests": 65,
+      "test_seconds": 0.688,
+      "lpt_cost_seconds": 2.688,
+      "lower_bound_seconds": 2.688
+    },
+    {
+      "file": "tests/dialects/test_redshift.py",
+      "tests": 22,
+      "test_seconds": 0.633,
+      "lpt_cost_seconds": 2.633,
+      "lower_bound_seconds": 2.633
+    },
+    {
+      "file": "tests/dialects/test_clickhouse.py",
+      "tests": 42,
+      "test_seconds": 0.515,
+      "lpt_cost_seconds": 2.515,
+      "lower_bound_seconds": 2.515
+    },
+    {
+      "file": "tests/test_transpile.py",
+      "tests": 28,
+      "test_seconds": 0.5,
+      "lpt_cost_seconds": 2.5,
+      "lower_bound_seconds": 2.5
+    },
+    {
+      "file": "tests/dialects/test_postgres.py",
+      "tests": 45,
+      "test_seconds": 0.475,
+      "lpt_cost_seconds": 2.475,
+      "lower_bound_seconds": 2.475
+    },
+    {
+      "file": "tests/dialects/test_mysql.py",
+      "tests": 70,
+      "test_seconds": 0.426,
+      "lpt_cost_seconds": 2.426,
+      "lower_bound_seconds": 2.426
+    },
+    {
+      "file": "tests/test_optimize_cross_joins.py",
+      "tests": 2,
+      "test_seconds": 0.411,
+      "lpt_cost_seconds": 2.411,
+      "lower_bound_seconds": 2.411
+    },
+    {
+      "file": "tests/dialects/test_spark.py",
+      "tests": 31,
+      "test_seconds": 0.346,
+      "lpt_cost_seconds": 2.346,
+      "lower_bound_seconds": 2.346
+    },
+    {
+      "file": "tests/dialects/test_sqlite.py",
+      "tests": 42,
+      "test_seconds": 0.325,
+      "lpt_cost_seconds": 2.325,
+      "lower_bound_seconds": 2.325
+    },
+    {
+      "file": "tests/dialects/test_oracle.py",
+      "tests": 41,
+      "test_seconds": 0.258,
+      "lpt_cost_seconds": 2.258,
+      "lower_bound_seconds": 2.258
+    },
+    {
+      "file": "tests/dialects/test_exasol.py",
+      "tests": 20,
+      "test_seconds": 0.231,
+      "lpt_cost_seconds": 2.231,
+      "lower_bound_seconds": 2.231
+    },
+    {
+      "file": "tests/dialects/test_presto.py",
+      "tests": 23,
+      "test_seconds": 0.219,
+      "lpt_cost_seconds": 2.219,
+      "lower_bound_seconds": 2.219
+    },
+    {
+      "file": "tests/dialects/test_teradata.py",
+      "tests": 33,
+      "test_seconds": 0.216,
+      "lpt_cost_seconds": 2.216,
+      "lower_bound_seconds": 2.216
+    },
+    {
+      "file": "tests/dialects/test_hive.py",
+      "tests": 18,
+      "test_seconds": 0.198,
+      "lpt_cost_seconds": 2.198,
+      "lower_bound_seconds": 2.198
+    },
+    {
+      "file": "tests/test_lineage.py",
+      "tests": 50,
+      "test_seconds": 0.194,
+      "lpt_cost_seconds": 2.194,
+      "lower_bound_seconds": 2.194
+    },
+    {
+      "file": "tests/dialects/test_databricks.py",
+      "tests": 30,
+      "test_seconds": 0.192,
+      "lpt_cost_seconds": 2.192,
+      "lower_bound_seconds": 2.192
+    },
+    {
+      "file": "tests/dialects/test_trino.py",
+      "tests": 23,
+      "test_seconds": 0.156,
+      "lpt_cost_seconds": 2.156,
+      "lower_bound_seconds": 2.156
+    },
+    {
+      "file": "tests/dialects/test_starrocks.py",
+      "tests": 28,
+      "test_seconds": 0.153,
+      "lpt_cost_seconds": 2.153,
+      "lower_bound_seconds": 2.153
+    },
+    {
+      "file": "tests/dialects/test_singlestore.py",
+      "tests": 28,
+      "test_seconds": 0.152,
+      "lpt_cost_seconds": 2.152,
+      "lower_bound_seconds": 2.152
+    },
+    {
+      "file": "tests/dialects/test_pipe_syntax.py",
+      "tests": 11,
+      "test_seconds": 0.127,
+      "lpt_cost_seconds": 2.127,
+      "lower_bound_seconds": 2.127
+    },
+    {
+      "file": "tests/test_sqlglotc.py",
+      "tests": 3,
+      "test_seconds": 0.115,
+      "lpt_cost_seconds": 2.115,
+      "lower_bound_seconds": 2.115
+    },
+    {
+      "file": "tests/test_simplify_between.py",
+      "tests": 2,
+      "test_seconds": 0.109,
+      "lpt_cost_seconds": 2.109,
+      "lower_bound_seconds": 2.109
+    },
+    {
+      "file": "tests/test_build.py",
+      "tests": 1,
+      "test_seconds": 0.104,
+      "lpt_cost_seconds": 2.104,
+      "lower_bound_seconds": 2.104
+    },
+    {
+      "file": "tests/test_jsonpath.py",
+      "tests": 6,
+      "test_seconds": 0.094,
+      "lpt_cost_seconds": 2.094,
+      "lower_bound_seconds": 2.094
+    },
+    {
+      "file": "tests/test_transforms.py",
+      "tests": 8,
+      "test_seconds": 0.093,
+      "lpt_cost_seconds": 2.093,
+      "lower_bound_seconds": 2.093
+    },
+    {
+      "file": "tests/dialects/test_athena.py",
+      "tests": 15,
+      "test_seconds": 0.088,
+      "lpt_cost_seconds": 2.088,
+      "lower_bound_seconds": 2.088
+    },
+    {
+      "file": "tests/dialects/test_doris.py",
+      "tests": 13,
+      "test_seconds": 0.067,
+      "lpt_cost_seconds": 2.067,
+      "lower_bound_seconds": 2.067
+    },
+    {
+      "file": "tests/test_diff.py",
+      "tests": 14,
+      "test_seconds": 0.045,
+      "lpt_cost_seconds": 2.045,
+      "lower_bound_seconds": 2.045
+    },
+    {
+      "file": "tests/dialects/test_dremio.py",
+      "tests": 23,
+      "test_seconds": 0.035,
+      "lpt_cost_seconds": 2.035,
+      "lower_bound_seconds": 2.035
+    },
+    {
+      "file": "tests/dialects/test_fabric.py",
+      "tests": 7,
+      "test_seconds": 0.018,
+      "lpt_cost_seconds": 2.018,
+      "lower_bound_seconds": 2.018
+    },
+    {
+      "file": "tests/dialects/test_prql.py",
+      "tests": 1,
+      "test_seconds": 0.017,
+      "lpt_cost_seconds": 2.017,
+      "lower_bound_seconds": 2.017
+    },
+    {
+      "file": "tests/dialects/test_dune.py",
+      "tests": 1,
+      "test_seconds": 0.015,
+      "lpt_cost_seconds": 2.015,
+      "lower_bound_seconds": 2.015
+    },
+    {
+      "file": "tests/dialects/test_materialize.py",
+      "tests": 2,
+      "test_seconds": 0.012,
+      "lpt_cost_seconds": 2.012,
+      "lower_bound_seconds": 2.012
+    },
+    {
+      "file": "tests/test_typing.py",
+      "tests": 1,
+      "test_seconds": 0.011,
+      "lpt_cost_seconds": 2.011,
+      "lower_bound_seconds": 2.011
+    },
+    {
+      "file": "tests/dialects/test_druid.py",
+      "tests": 2,
+      "test_seconds": 0.01,
+      "lpt_cost_seconds": 2.01,
+      "lower_bound_seconds": 2.01
+    },
+    {
+      "file": "tests/dialects/test_drill.py",
+      "tests": 3,
+      "test_seconds": 0.008,
+      "lpt_cost_seconds": 2.008,
+      "lower_bound_seconds": 2.008
+    },
+    {
+      "file": "tests/dialects/test_dax.py",
+      "tests": 3,
+      "test_seconds": 0.007,
+      "lpt_cost_seconds": 2.007,
+      "lower_bound_seconds": 2.007
+    },
+    {
+      "file": "tests/test_anonymize.py",
+      "tests": 29,
+      "test_seconds": 0.007,
+      "lpt_cost_seconds": 2.007,
+      "lower_bound_seconds": 2.007
+    },
+    {
+      "file": "tests/dialects/test_risingwave.py",
+      "tests": 2,
+      "test_seconds": 0.006,
+      "lpt_cost_seconds": 2.006,
+      "lower_bound_seconds": 2.006
+    },
+    {
+      "file": "tests/dialects/test_tableau.py",
+      "tests": 1,
+      "test_seconds": 0.006,
+      "lpt_cost_seconds": 2.006,
+      "lower_bound_seconds": 2.006
+    },
+    {
+      "file": "tests/test_time.py",
+      "tests": 4,
+      "test_seconds": 0.004,
+      "lpt_cost_seconds": 2.004,
+      "lower_bound_seconds": 2.004
+    },
+    {
+      "file": "tests/test_dialect_entry_points.py",
+      "tests": 3,
+      "test_seconds": 0.003,
+      "lpt_cost_seconds": 2.003,
+      "lower_bound_seconds": 2.003
+    },
+    {
+      "file": "tests/test_tokens.py",
+      "tests": 11,
+      "test_seconds": 0.002,
+      "lpt_cost_seconds": 2.002,
+      "lower_bound_seconds": 2.002
+    },
+    {
+      "file": "tests/dialects/test_solr.py",
+      "tests": 1,
+      "test_seconds": 0.001,
+      "lpt_cost_seconds": 2.001,
+      "lower_bound_seconds": 2.001
+    },
+    {
+      "file": "tests/test_dialect_imports.py",
+      "tests": 2,
+      "test_seconds": 0.001,
+      "lpt_cost_seconds": 2.001,
+      "lower_bound_seconds": 2.001
+    },
+    {
+      "file": "tests/test_errors.py",
+      "tests": 13,
+      "test_seconds": 0.001,
+      "lpt_cost_seconds": 2.001,
+      "lower_bound_seconds": 2.001
+    },
+    {
+      "file": "tests/test_helper.py",
+      "tests": 4,
+      "test_seconds": 0.001,
+      "lpt_cost_seconds": 2.001,
+      "lower_bound_seconds": 2.001
+    }
+  ],
+  "slowest_tests": [
+    {
+      "number": 1490,
+      "id": "tests/test_parser.py::TestParser::test_max_nodes",
+      "file": "tests/test_parser.py",
+      "seconds": 28.817
+    },
+    {
+      "number": 1106,
+      "id": "tests/test_executor.py::TestExecutor::test_execute_tpcds",
+      "file": "tests/test_executor.py",
+      "seconds": 21.454
+    },
+    {
+      "number": 1224,
+      "id": "tests/test_generator.py::TestGenerator::test_generator_memory",
+      "file": "tests/test_generator.py",
+      "seconds": 6.686
+    },
+    {
+      "number": 1107,
+      "id": "tests/test_executor.py::TestExecutor::test_execute_tpch",
+      "file": "tests/test_executor.py",
+      "seconds": 3.863
+    },
+    {
+      "number": 1123,
+      "id": "tests/test_executor.py::TestExecutor::test_optimized_tpch",
+      "file": "tests/test_executor.py",
+      "seconds": 3.537
+    },
+    {
+      "number": 1428,
+      "id": "tests/test_optimizer.py::TestOptimizer::test_scope",
+      "file": "tests/test_optimizer.py",
+      "seconds": 2.533
+    },
+    {
+      "number": 1440,
+      "id": "tests/test_optimizer.py::TestOptimizer::test_tpcds",
+      "file": "tests/test_optimizer.py",
+      "seconds": 2.232
+    },
+    {
+      "number": 1295,
+      "id": "tests/test_optimizer.py::TestOptimizer::test_annotate_funcs",
+      "file": "tests/test_optimizer.py",
+      "seconds": 1.963
+    },
+    {
+      "number": 1382,
+      "id": "tests/test_optimizer.py::TestOptimizer::test_qualify_columns",
+      "file": "tests/test_optimizer.py",
+      "seconds": 1.406
+    },
+    {
+      "number": 1082,
+      "id": "tests/test_executor.py::TestExecutor::test_agg_order",
+      "file": "tests/test_executor.py",
+      "seconds": 1.364
+    },
+    {
+      "number": 1361,
+      "id": "tests/test_optimizer.py::TestOptimizer::test_optimize_in_nulls",
+      "file": "tests/test_optimizer.py",
+      "seconds": 1.331
+    },
+    {
+      "number": 1541,
+      "id": "tests/test_schema.py::TestSchema::test_cache_does_not_retain_queries",
+      "file": "tests/test_schema.py",
+      "seconds": 1.298
+    },
+    {
+      "number": 1343,
+      "id": "tests/test_optimizer.py::TestOptimizer::test_merge_subqueries",
+      "file": "tests/test_optimizer.py",
+      "seconds": 1.016
+    },
+    {
+      "number": 1313,
+      "id": "tests/test_optimizer.py::TestOptimizer::test_canonicalize",
+      "file": "tests/test_optimizer.py",
+      "seconds": 1.006
+    },
+    {
+      "number": 1415,
+      "id": "tests/test_optimizer.py::TestOptimizer::test_qualify_struct_star_long_cte_chain",
+      "file": "tests/test_optimizer.py",
+      "seconds": 0.905
+    },
+    {
+      "number": 1560,
+      "id": "tests/test_serde.py::TestSerde::test_recursion",
+      "file": "tests/test_serde.py",
+      "seconds": 0.886
+    },
+    {
+      "number": 1358,
+      "id": "tests/test_optimizer.py::TestOptimizer::test_optimize_correlated_all",
+      "file": "tests/test_optimizer.py",
+      "seconds": 0.686
+    },
+    {
+      "number": 773,
+      "id": "tests/dialects/test_snowflake.py::TestSnowflake::test_snowflake",
+      "file": "tests/dialects/test_snowflake.py",
+      "seconds": 0.662
+    },
+    {
+      "number": 1434,
+      "id": "tests/test_optimizer.py::TestOptimizer::test_simplify",
+      "file": "tests/test_optimizer.py",
+      "seconds": 0.596
+    },
+    {
+      "number": 1561,
+      "id": "tests/test_serde.py::TestSerde::test_serde",
+      "file": "tests/test_serde.py",
+      "seconds": 0.506
+    }
+  ],
+  "provenance": {
+    "repository": "TheEhMan/blast",
+    "inspected_commit": "7e6f6f8aabe3a483ddda933f8dcbbc5ea2e6c67e",
+    "sample_files_match_current_github_blobs_after_crlf_normalization": true,
+    "current_selector_benchmarked": false,
+    "reason": "The binary map could not be downloaded through the available connector; Docker is not available in this environment.",
+    "sample_blob_hashes": {
+      "sample/tests.json": "18aa4dfddff39f375d46e2c4c1d428474be2f848",
+      "sample/answers.json": "6ceef1fe6f2c0923141b9b4d746e42466e57054a"
+    }
+  },
+  "validation": {
+    "unit_tests_passed": 5,
+    "reference_score_comparison": "PASS",
+    "reference_test": "all tests on all 30 sample commits, LPT worker allocation",
+    "reference_simulated_seconds": 1104.51,
+    "reference_misses": 0
+  }
+}

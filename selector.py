@@ -272,7 +272,7 @@ def func_tests(per, stmts, start, end, old_touch):
 
 
 # Coverage under-records these test files, so one hit means run the whole file.
-FAMILY_FILES = ("tests/test_optimizer.py",)
+FAMILY_FILES = ()
 
 
 def expand_family(chosen):

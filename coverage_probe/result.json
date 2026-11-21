@@ -1,0 +1,22 @@
+{
+  "coverage_version": "7.13.3",
+  "same_results": true,
+  "parent_only": {},
+  "explicit_child_context": {
+    "/mnt/data/blast_analysis/coverage_probe/work_unit.py": {
+      "2": [
+        "test_negative|run",
+        "test_positive|run"
+      ],
+      "4": [
+        "test_negative|run"
+      ],
+      "1": [
+        "test_positive|run"
+      ],
+      "3": [
+        "test_positive|run"
+      ]
+    }
+  }
+}
